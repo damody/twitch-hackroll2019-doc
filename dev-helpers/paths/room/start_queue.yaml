@@ -1,0 +1,32 @@
+post:
+  summary: Start lining up to play games 開始排隊玩遊戲
+  tags:
+    - room
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - userid
+          properties:
+            userid:
+              type: string
+              example: 'damody'
+              description: |
+                user id
+                使用者代號
+  responses:
+    '200':
+      description: |
+        Success
+      headers:
+    '500':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"

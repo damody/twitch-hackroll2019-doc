@@ -1,0 +1,51 @@
+post:
+  summary: add_points 點天賦
+  tags:
+    - add
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - user_id
+            - talent
+            - point
+          properties:
+            user_id:
+              type: string
+              example: 'aklhim23kd7x5qg8o5d030zy1hak0s'
+              description: |
+                user id
+                使用者代號
+            talent:
+              type: string
+              example: 'attack'
+              description: |
+                talent
+                天賦代號
+            point:
+              type: integer
+              example: 5
+              description: |
+                天賦要點多少點
+
+  responses:
+    'success':
+      description: |
+        成功
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"
+

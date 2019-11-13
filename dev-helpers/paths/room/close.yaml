@@ -1,0 +1,37 @@
+post:
+  summary: close room 關閉新房間
+  tags:
+    - room
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - userid
+          properties:
+            userid:
+              type: string
+              example: 'damody'
+              description: |
+                user id
+                使用者代號
+  responses:
+    'success':
+      description: |
+        All stores in the search range  
+        搜尋範圍內所有餐廳
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"

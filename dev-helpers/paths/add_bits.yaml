@@ -1,0 +1,41 @@
+post:
+  summary: add bits 增加小奇點
+  tags:
+    - add
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - userid
+          properties:
+            userid:
+              type: string
+              example: 'nsdxhfcq81t7bce3uw5xrejnnj6tqy'
+              description: |
+                user id
+                使用者代號
+            bits:
+              type: integer
+              example: 5
+              description: |
+                天賦要點多少點
+  responses:
+    'success':
+      description: |
+        成功
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"

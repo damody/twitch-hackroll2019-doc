@@ -1,0 +1,16 @@
+Success:
+  required:
+    - error
+  properties:
+    msg:
+      type: string
+      example: ok
+      description: real error message in there.
+Error:
+  required:
+    - error
+  properties:
+    msg:
+      type: string
+      example: index out of range.
+      description: real error message in there.

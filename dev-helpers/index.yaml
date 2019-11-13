@@ -1,0 +1,24 @@
+openapi: "3.0.0"
+info:
+  version: 0.2
+  title: 小奇點戰士
+  description: side project
+  contact:
+    name: "damody"
+    url: ""
+    email: "t1238142000@gmail.com"
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+servers:
+  - url: http://127.0.0.1:8000/
+paths:
+  /new_live_master:
+    $ref: /paths/new_live_master.yaml
+  /add_bits:
+    $ref: /paths/add_bits.yaml
+  /add_points:
+    $ref: /paths/add_points.yaml
+  /get_live_master:
+    $ref: /paths/get_live_master.yaml
+

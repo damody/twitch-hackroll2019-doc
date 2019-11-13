@@ -1,0 +1,43 @@
+post:
+  summary: new_live_master 新實況主
+  tags:
+    - new
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - user_id
+            - channel_id
+          properties:
+            user_id:
+              type: string
+              example: 'aklhim23kd7x5qg8o5d030zy1hak0s'
+              description: |
+                user id
+                使用者代號
+            channel_id:
+              type: string
+              example: 'channel_id'
+              description: |
+                channel id
+                頻道代號
+  responses:
+    'success':
+      description: |
+        成功
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"

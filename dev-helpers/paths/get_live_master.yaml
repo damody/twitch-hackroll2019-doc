@@ -1,0 +1,88 @@
+post:
+  summary: get_live_master 得到實況主資訊
+  tags:
+    - get
+  parameters:
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          # Body schema with atomic property examples
+          type: object
+          required:
+            - userid
+          properties:
+            userid:
+              type: string
+              example: 'aklhim23kd7x5qg8o5d030zy1hak0s'
+              description: |
+                user id
+                使用者代號
+            attack:
+              type: number 
+              example: 10.0
+              description: |
+                攻擊
+            speed:
+              type: number 
+              format: float
+              example: 10.5
+              description: |
+                攻速
+            armor:
+              type: number 
+              example: 10.0
+              description: |
+                防禦力
+            hp:
+              type: number 
+              example: 10.0
+              description: |
+                血量
+            steal:
+              type: number 
+              example: 10.0
+              description: |
+                吸血
+            heal:
+              type: number 
+              example: 10.0
+              description: |
+                回血
+            true_damage:
+              type: number 
+              example: 0.0
+              description: |
+                固定真傷
+            miss:
+              type: number 
+              example: 0.0
+              description: |
+                閃避率
+            crit:
+              type: number 
+              example: 0.0
+              description: |
+                爆擊率
+            stun:
+              type: number 
+              example: 0.0
+              description: |
+                暈擊率
+
+  responses:
+    'success':
+      description: |
+        成功
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"

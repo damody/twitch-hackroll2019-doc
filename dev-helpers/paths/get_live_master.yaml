@@ -37,6 +37,11 @@ post:
             required:
               - user_id
             properties:
+              points:
+                type: integer 
+                example: 4
+                description: |
+                  剩餘點數
               attack:
                 type: number 
                 example: 10.0

@@ -12,5 +12,5 @@ Error:
   properties:
     msg:
       type: string
-      example: index out of range.
+      example: fail.
       description: real error message in there.

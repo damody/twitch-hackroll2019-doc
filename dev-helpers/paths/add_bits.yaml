@@ -15,10 +15,16 @@ post:
           properties:
             user_id:
               type: string
-              example: 'nsdxhfcq81t7bce3uw5xrejnnj6tqy'
+              example: '44322889'
               description: |
                 user id
                 使用者代號
+            channel_id:
+              type: string
+              example: '44322889'
+              description: |
+                channel id
+                頻道代號
             bits:
               type: integer
               example: 5

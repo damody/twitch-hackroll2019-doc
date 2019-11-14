@@ -11,9 +11,9 @@ post:
           # Body schema with atomic property examples
           type: object
           required:
-            - userid
+            - user_id
           properties:
-            userid:
+            user_id:
               type: string
               example: 'aklhim23kd7x5qg8o5d030zy1hak0s'
               description: |
